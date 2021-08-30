@@ -1,0 +1,16 @@
+<launch>
+
+    <node name="slam_gmapping" pkg="gmapping" type="slam_gmapping" 
+        output="screen">
+        <param name="scan" value="scan"/>
+        <param name="odom_frame" value="odom"/>
+    </node>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find create_remote_bringup)/config/visual_config.rviz"/>
+  
+    <!--node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard"
+        type="teleop_twist_keyboard.py" output="screen"/-->
+    
+
+
+</launch>
